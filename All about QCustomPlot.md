@@ -6,3 +6,14 @@
 - 为什么QCharts的性能很差劲，尤其是在实时高速绘图这方面。
 - QCustomPlot有哪些惊喜的特性
 - 如何定制你自己的QCustomPlot用于频谱仪的显示界面
+
+## 关于QCustomPlot你应该知道的
+
+#### 自适应采样率
+- QCustomPlot的Adaptive sampling自适应采样率是默认打开的，在源码第21038行
+```C++
+void QCPGraph::setAdaptiveSampling(bool enabled)
+{
+  mAdaptiveSampling = enabled; //line:21038
+}
+```
