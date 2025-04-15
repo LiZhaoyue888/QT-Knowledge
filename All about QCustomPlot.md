@@ -8,7 +8,8 @@
 - 如何定制你自己的QCustomPlot用于频谱仪的显示界面
 
 ## 关于QCustomPlot你应该知道的
-
+- 官方链接：https://www.qcustomplot.com/
+- Github官方源码带Demo：https://github.com/dbzhang800/QCustomPlot/blob/master/examples/plots/mainwindow.cpp
 #### 自适应采样率
 - QCustomPlot的Adaptive sampling自适应采样率是默认打开的，在源码第21038行
 ```C++
@@ -17,3 +18,7 @@ void QCPGraph::setAdaptiveSampling(bool enabled)
   mAdaptiveSampling = enabled; //line:21038
 }
 ```
+#### 如何启用官方源码
+1. 用Qt Creator打开 QCustomPlot\examples\plots\plot-examples.pro
+2. 修改.pro的QCustomPlot的路径，把QCustomPlot.h和.cpp多拷贝几份到../../路径和.pro路径
+3. 修改mainwindow里面的  setupDemo(20);，启用官方示例的20个Demo
