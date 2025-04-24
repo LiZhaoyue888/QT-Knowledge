@@ -22,3 +22,14 @@ void QCPGraph::setAdaptiveSampling(bool enabled)
 1. 用Qt Creator打开 QCustomPlot\examples\plots\plot-examples.pro
 2. 修改.pro的QCustomPlot的路径，把QCustomPlot.h和.cpp多拷贝几份到../../路径和.pro路径
 3. 修改mainwindow里面的  setupDemo(20);，启用官方示例的20个Demo
+
+#### 关于何时启用OpenGL加速
+答案是：不建议启用，理由有3
+1. OpenGL加速在数据量很小的情况加反而更慢了，对比8ms(启用OPenGL) VS 3ms(未启用Opengl)
+2. OpenGL会影响显示效果，坐标轴会走样模糊，内部渲染会出问题
+3. OPenGL加速依然处于实验性阶段，不建议启用
+
+#### 如何启用OpenGL加速
+1. Qt VS Tool勾上 OpneGL模块
+2. C++宏定义添加 QCUSTOMPLOT_USE_OPENGL
+3. C++连接器输入：opengl32.lib
