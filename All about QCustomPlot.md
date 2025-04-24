@@ -8,8 +8,10 @@
 - 如何定制你自己的QCustomPlot用于频谱仪的显示界面
 
 ## 关于QCustomPlot你应该知道的
-- 官方链接：https://www.qcustomplot.com/
-- Github官方源码带Demo：https://github.com/dbzhang800/QCustomPlot/blob/master/examples/plots/mainwindow.cpp
+- 官网链接：https://www.qcustomplot.com/
+- Github官方Demo：https://github.com/dbzhang800/QCustomPlot/blob/master/examples/plots/mainwindow.cpp
+- 坐标轴和网格详解：https://www.qcustomplot.com/documentation/classQCPAxis.html
+- 布局系统：https://www.qcustomplot.com/documentation/thelayoutsystem.html
 #### 自适应采样率
 - QCustomPlot的Adaptive sampling自适应采样率是默认打开的，在源码第21038行
 ```C++
